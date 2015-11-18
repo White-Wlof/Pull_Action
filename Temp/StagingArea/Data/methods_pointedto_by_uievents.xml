@@ -1,0 +1,10 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="Restart">
+			<method name="restart"/>
+		</type>
+		<type fullname="Stop">
+			<method name="stop"/>
+		</type>
+	</assembly>
+</linker>
