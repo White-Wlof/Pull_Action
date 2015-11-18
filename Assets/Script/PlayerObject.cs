@@ -54,7 +54,7 @@ public class PlayerObject : MonoBehaviour {
 					} else if (Input.GetMouseButtonUp (0)) {
 						endPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 						force = new Vector2 (startPos.x - endPos.x, startPos.y - endPos.y);
-						Rig.AddForce (force * 5000 * Time.deltaTime);
+						Rig.AddForce (force * 2000 * Time.deltaTime);
 						arrayObject.SetActive (false);
 					}
 					

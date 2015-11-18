@@ -225,7 +225,7 @@ extern "C" void EnemyObject_Start_m2 (EnemyObject_t1 * __this, const MethodInfo*
 		__this->___yPosition_4 = (0.0f);
 		Vector2_t3  L_0 = Vector2_get_zero_m56(NULL /*static, unused*/, /*hidden argument*/NULL);
 		__this->___forceStorage_3 = L_0;
-		int32_t L_1 = Random_Range_m57(NULL /*static, unused*/, ((int32_t)-100000), ((int32_t)-200000), /*hidden argument*/NULL);
+		int32_t L_1 = Random_Range_m57(NULL /*static, unused*/, ((int32_t)-50000), ((int32_t)-100000), /*hidden argument*/NULL);
 		Vector2_t3  L_2 = {0};
 		Vector2__ctor_m58(&L_2, (0.0f), (((float)((float)L_1))), /*hidden argument*/NULL);
 		__this->___force_2 = L_2;
@@ -1408,7 +1408,7 @@ IL_01c5:
 		__this->___force_6 = L_65;
 		Rigidbody2D_t5 * L_66 = (__this->___Rig_10);
 		Vector2_t3  L_67 = (__this->___force_6);
-		Vector2_t3  L_68 = Vector2_op_Multiply_m63(NULL /*static, unused*/, L_67, (5000.0f), /*hidden argument*/NULL);
+		Vector2_t3  L_68 = Vector2_op_Multiply_m63(NULL /*static, unused*/, L_67, (2000.0f), /*hidden argument*/NULL);
 		float L_69 = Time_get_deltaTime_m62(NULL /*static, unused*/, /*hidden argument*/NULL);
 		Vector2_t3  L_70 = Vector2_op_Multiply_m63(NULL /*static, unused*/, L_68, L_69, /*hidden argument*/NULL);
 		NullCheck(L_66);
