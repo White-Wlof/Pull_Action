@@ -83,6 +83,9 @@ public class GameMain : MonoBehaviour {
 
 	public void addScore(int n){
 		score += n;
+		if(score < 0){
+			score = 0;
+		}
 	}
 
 	public int getScore(){
