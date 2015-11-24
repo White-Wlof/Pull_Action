@@ -16,7 +16,7 @@ public class EnemyObject : MonoBehaviour {
 	void Start () {
 		yPosition = 0f;
 		forceStorage = Vector2.zero;
-		force = new Vector2 (0, Random.Range(-50000, -100000));
+		force = new Vector2 (0, Random.Range(-20000, -70000));
 		Debug.Log (force.y);
 		this.gameObject.GetComponent<Rigidbody2D> ().AddForce (force * Time.deltaTime);
 	}
