@@ -88,6 +88,10 @@ public class GameMain : MonoBehaviour {
 		}
 	}
 
+	public int getCount(){
+		return count;
+	}
+
 	public int getScore(){
 		return score;
 	}

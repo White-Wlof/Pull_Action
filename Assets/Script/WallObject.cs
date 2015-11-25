@@ -13,7 +13,7 @@ public class WallObject : MonoBehaviour {
 			if (gm.getIsPlayFlag()) {
 				if(!gm.getIsStopFlag()){
 					if(col.transform.tag.Equals("Player")){
-						gm.addScore(-10);
+						gm.addScore(gm.getCount() * -2);
 					}
 				}
 			}

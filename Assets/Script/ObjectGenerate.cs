@@ -13,7 +13,7 @@ public class ObjectGenerate : MonoBehaviour {
 	private GameMain gm;
 
 	void Awake(){
-		objectNameArray = new string[]{"FallingOnes", "Player"};
+		objectNameArray = new string[]{"Player", "FallingOnes", "FallingOnes2"};
 		startPosition = new Vector3 (0, 0, 0);
 		startObjectPosition = new Vector3 (0, 6, 0);
 		objectList = new List<GameObject>();
@@ -32,7 +32,7 @@ public class ObjectGenerate : MonoBehaviour {
 		waitTime = 0.5f;
 		objectID = 0;
 		StartCoroutine ("generateTimer");
-		Instantiate (objectList[1], startPosition, Quaternion.identity);
+		Instantiate (objectList[0], startPosition, Quaternion.identity);
 	}
 
 	private IEnumerator generateTimer(){
@@ -41,10 +41,13 @@ public class ObjectGenerate : MonoBehaviour {
 			if (gm.getIsPlayFlag ()) {
 				if (!gm.getIsStopFlag ()) {
 					waitTime = Random.Range (0f, 1f);
-					objectID = Random.Range (0, 2);
+					objectID = Random.Range (1, objectList.Count);
+					if(gm.getScore() < 20000){
+						objectID = 1;
+					}
 					Debug.Log ("objectID:" + objectID);
 					startObjectPosition.x = Random.Range (-2f, 2f);
-					GameObject obj = (GameObject)Instantiate (objectList [0], startObjectPosition, Quaternion.identity);
+					GameObject obj = (GameObject)Instantiate (objectList [objectID], startObjectPosition, Quaternion.identity);
 					obj.transform.parent = enemys.transform;
 				} else {
 					waitTime = 0f;
